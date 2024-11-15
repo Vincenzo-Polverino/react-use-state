@@ -9,17 +9,18 @@ function App() {
 
   return (
     <>
-      <div className='button'>
-        {languages.map(language => (<button key={language.id} onClick={() => setSelectLang(language)}>
-          {language.title}
-        </button>
-        ))}
+      <div className='box'>
+        <div className='button'>
+          {languages.map(language => (<button key={language.id} onClick={() => setSelectLang(language)}>
+            {language.title}
+          </button>
+          ))}
+        </div>
+        <div className='card'>
+          <h2>{selectLang.title}</h2>
+          <p>{selectLang.description}</p>
+        </div>
       </div>
-      <div className='card'>
-        <h2>{selectLang.title}</h2>
-        <p>{selectLang.description}</p>
-      </div>
-
     </>
   )
 }
